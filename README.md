@@ -1,1 +1,0 @@
-# Wycena_Manager
