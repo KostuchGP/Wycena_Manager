@@ -6,5 +6,3 @@ Do wprowadzenia:
 
 * Odnośniki do zdjęć
 * Pozostałe moduły
-
-Comm
