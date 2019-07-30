@@ -1,0 +1,13 @@
+Aktualne:
+* Wyliczanie modułu klampienia
+
+
+
+
+
+Na później:
+* Przeliczniki skokowo z 0,1
+* Logo
+* Copyright
+* Górny panel -> menu plus About itp.
+* Opcja podglądu i zmian przeliczników wbudowanych np: 'Formuła ceny Kości Materiał: wariant*przelicznik*3%

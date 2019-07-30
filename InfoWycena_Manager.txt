@@ -1,0 +1,25 @@
+Aktualne:
+* Wyliczanie modułu klampienia
+* A gdzie godziny konstrukcyjne itp na całym module - Na później
+
+
+
+
+
+Na później:
+* Przeliczniki skokowo z 0,1
+* Logo
+* Copyright
+* Górny panel -> menu plus About itp.
+* Opcja podglądu i zmian przeliczników wbudowanych np: 'Formuła ceny Kości Materiał: wariant*przelicznik*3%
+* Jeżeli nie został wciśnięty przycisk przelicz nie bedzie exportu
+* dodanie znaku zł i Euro w ListView
+* Ghost name w txtNM
+* Opcja clear przed przeliczeniem
+* Jeżeli klikam czyść to ładuje wszystko od nowa w tym ListView
+* Drugie okno w którym będą się wrzucać moduły po kolei, a potem przy exporcie wszystie polecą
+* Wybieranie lokalizacji i nazwy dla excela z wyceną
+* Zdalne branie wzorcowego excela z lokalizacji instalacji
+* Dokumentacja szkoleniowa
+* Skróty klawiszowe, opcje tabulacji
+* Kolorowanie nazwy modułu w excelu 
