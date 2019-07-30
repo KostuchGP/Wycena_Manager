@@ -95,7 +95,7 @@ Partial Class Form1
         'ComBoxPyt2
         '
         Me.ComBoxPyt2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComBoxPyt2.Items.AddRange(New Object() {"Brak", "Mały [12-20]", "Średni [25-40]", "Duży [50-63]"})
+        Me.ComBoxPyt2.Items.AddRange(New Object() {"Brak", "Mały [40]", "Średni [50-63]", "Duży [80]"})
         Me.ComBoxPyt2.Location = New System.Drawing.Point(326, 94)
         Me.ComBoxPyt2.Name = "ComBoxPyt2"
         Me.ComBoxPyt2.Size = New System.Drawing.Size(188, 24)
@@ -117,7 +117,7 @@ Partial Class Form1
         Me.LbPyt3.BackColor = System.Drawing.Color.White
         Me.LbPyt3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LbPyt3.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbPyt3.Location = New System.Drawing.Point(6, 130)
+        Me.LbPyt3.Location = New System.Drawing.Point(6, 125)
         Me.LbPyt3.Name = "LbPyt3"
         Me.LbPyt3.Size = New System.Drawing.Size(314, 26)
         Me.LbPyt3.TabIndex = 12
@@ -127,7 +127,7 @@ Partial Class Form1
         '
         Me.ComBoxPyt3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComBoxPyt3.Items.AddRange(New Object() {"1", "2", "3"})
-        Me.ComBoxPyt3.Location = New System.Drawing.Point(326, 134)
+        Me.ComBoxPyt3.Location = New System.Drawing.Point(326, 127)
         Me.ComBoxPyt3.Name = "ComBoxPyt3"
         Me.ComBoxPyt3.Size = New System.Drawing.Size(188, 24)
         Me.ComBoxPyt3.TabIndex = 13
@@ -138,7 +138,7 @@ Partial Class Form1
         Me.LbPyt4.BackColor = System.Drawing.Color.White
         Me.LbPyt4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LbPyt4.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbPyt4.Location = New System.Drawing.Point(6, 165)
+        Me.LbPyt4.Location = New System.Drawing.Point(6, 160)
         Me.LbPyt4.Name = "LbPyt4"
         Me.LbPyt4.Size = New System.Drawing.Size(314, 26)
         Me.LbPyt4.TabIndex = 14
@@ -148,7 +148,7 @@ Partial Class Form1
         '
         Me.ComBoxPyt4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComBoxPyt4.Items.AddRange(New Object() {"Nie", "Tak"})
-        Me.ComBoxPyt4.Location = New System.Drawing.Point(326, 167)
+        Me.ComBoxPyt4.Location = New System.Drawing.Point(326, 162)
         Me.ComBoxPyt4.Name = "ComBoxPyt4"
         Me.ComBoxPyt4.Size = New System.Drawing.Size(188, 24)
         Me.ComBoxPyt4.TabIndex = 15
@@ -169,7 +169,7 @@ Partial Class Form1
         Me.NumberPyt2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.NumberPyt2.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
         Me.NumberPyt2.InterceptArrowKeys = False
-        Me.NumberPyt2.Location = New System.Drawing.Point(6, 94)
+        Me.NumberPyt2.Location = New System.Drawing.Point(6, 95)
         Me.NumberPyt2.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.NumberPyt2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumberPyt2.Name = "NumberPyt2"
@@ -192,19 +192,19 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.NMLabel)
         Me.GroupBox1.Controls.Add(Me.txtNM)
         Me.GroupBox1.Controls.Add(Me.LbPyt1)
+        Me.GroupBox1.Controls.Add(Me.ComBoxPyt2)
         Me.GroupBox1.Controls.Add(Me.LbPyt2)
         Me.GroupBox1.Controls.Add(Me.ComBoxPyt4)
-        Me.GroupBox1.Controls.Add(Me.ComBoxPyt2)
         Me.GroupBox1.Controls.Add(Me.LbPyt4)
         Me.GroupBox1.Controls.Add(Me.ComBoxPyt1)
         Me.GroupBox1.Controls.Add(Me.ComBoxPyt3)
         Me.GroupBox1.Controls.Add(Me.LbPyt3)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 11)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(520, 209)
+        Me.GroupBox1.Size = New System.Drawing.Size(520, 200)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.GroupBox1.Text = "Dane wejściowe"
         '
         'GroupBox2
         '
@@ -214,16 +214,16 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Location = New System.Drawing.Point(538, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(129, 208)
+        Me.GroupBox2.Size = New System.Drawing.Size(129, 199)
         Me.GroupBox2.TabIndex = 20
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        Me.GroupBox2.Text = "Przeliczniki"
         '
         'NumberPyt4
         '
         Me.NumberPyt4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.NumberPyt4.InterceptArrowKeys = False
-        Me.NumberPyt4.Location = New System.Drawing.Point(6, 168)
+        Me.NumberPyt4.Location = New System.Drawing.Point(6, 162)
         Me.NumberPyt4.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.NumberPyt4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumberPyt4.Name = "NumberPyt4"
@@ -235,7 +235,7 @@ Partial Class Form1
         '
         Me.NumberPyt3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.NumberPyt3.InterceptArrowKeys = False
-        Me.NumberPyt3.Location = New System.Drawing.Point(6, 133)
+        Me.NumberPyt3.Location = New System.Drawing.Point(6, 128)
         Me.NumberPyt3.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.NumberPyt3.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumberPyt3.Name = "NumberPyt3"
@@ -248,7 +248,7 @@ Partial Class Form1
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 54)
+        Me.Label3.Location = New System.Drawing.Point(6, 57)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(108, 26)
         Me.Label3.TabIndex = 16
@@ -266,10 +266,13 @@ Partial Class Form1
         '
         'LvwMain
         '
-        Me.LvwMain.Location = New System.Drawing.Point(12, 226)
+        Me.LvwMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LvwMain.Location = New System.Drawing.Point(18, 238)
         Me.LvwMain.MultiSelect = False
         Me.LvwMain.Name = "LvwMain"
-        Me.LvwMain.Size = New System.Drawing.Size(1368, 238)
+        Me.LvwMain.Size = New System.Drawing.Size(1452, 255)
         Me.LvwMain.TabIndex = 22
         Me.LvwMain.UseCompatibleStateImageBehavior = False
         Me.LvwMain.View = System.Windows.Forms.View.Details
@@ -277,7 +280,7 @@ Partial Class Form1
         'BtnClose
         '
         Me.BtnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.BtnClose.Location = New System.Drawing.Point(901, 20)
+        Me.BtnClose.Location = New System.Drawing.Point(965, 181)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(95, 44)
         Me.BtnClose.TabIndex = 23
@@ -298,7 +301,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1392, 542)
+        Me.ClientSize = New System.Drawing.Size(1482, 505)
         Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.LvwMain)
@@ -308,7 +311,7 @@ Partial Class Form1
         Me.Controls.Add(Me.BtnPrzelicz)
         Me.Controls.Add(Me.BtnClear)
         Me.MaximumSize = New System.Drawing.Size(1500, 800)
-        Me.MinimumSize = New System.Drawing.Size(1400, 500)
+        Me.MinimumSize = New System.Drawing.Size(1330, 550)
         Me.Name = "Form1"
         Me.Text = "Wycena_Manager_V1"
         CType(Me.NumberPyt2, System.ComponentModel.ISupportInitialize).EndInit()

@@ -1,5 +1,6 @@
 ﻿Imports System.Globalization
 Imports Microsoft.Office.Interop
+Imports Microsoft.Office.Interop.Excel
 #Const ProfileColRng = "$L:$L"
 
 Public Class Form1
@@ -17,73 +18,76 @@ Public Class Form1
         'Poniżej zestaw rzeczy jakie zostaną wypełnione ogólnie, później to trzeba zamienić na rzeczy jakie są dla 
         Dim item1 As ListViewItem = New ListViewItem("Siłownik", 0)
         item1.SubItems.Add("Szt.")
-        For i = 1 To 6
-            item1.SubItems.Add("-")
+        For i = 1 To 9
+            item1.SubItems.Add("0")
         Next
-        For i = 7 To 9
+        For i = 10 To 13
             item1.SubItems.Add("")
         Next
         Dim item2 As ListViewItem = New ListViewItem("Zawór", 0)
         item2.SubItems.Add("Szt.")
-        For i = 1 To 6
-            item2.SubItems.Add("-")
+        For i = 1 To 9
+            item2.SubItems.Add("0")
         Next
-        For i = 7 To 9
+        For i = 10 To 13
             item2.SubItems.Add("")
         Next
         Dim item3 As ListViewItem = New ListViewItem("Kość", 0)
         item3.SubItems.Add("Szt.")
-        For i = 1 To 6
-            item3.SubItems.Add("-")
+        For i = 1 To 9
+            item3.SubItems.Add("0")
         Next
-        For i = 7 To 9
+        For i = 10 To 13
             item3.SubItems.Add("")
         Next
-        Dim item4 As ListViewItem = New ListViewItem("Podkładki", 0)
+        Dim item4 As ListViewItem = New ListViewItem("Shimowanie", 0)
         item4.SubItems.Add("Szt.")
-        For i = 1 To 6
-            item4.SubItems.Add("-")
+        For i = 1 To 9
+            item4.SubItems.Add("0")
         Next
-        For i = 7 To 9
+        For i = 10 To 13
             item4.SubItems.Add("")
         Next
         Dim item5 As ListViewItem = New ListViewItem("Konsola", 0)
         item5.SubItems.Add("Szt.")
-        For i = 1 To 6
-            item5.SubItems.Add("-")
+        For i = 1 To 9
+            item5.SubItems.Add("0")
         Next
-        For i = 7 To 9
+        For i = 10 To 13
             item5.SubItems.Add("")
         Next
         Dim item6 As ListViewItem = New ListViewItem("Coś6", 0)
         item6.SubItems.Add("Szt.")
-        For i = 1 To 6
-            item6.SubItems.Add("-")
+        For i = 1 To 9
+            item6.SubItems.Add("0")
         Next
-        For i = 7 To 9
+        For i = 10 To 13
             item6.SubItems.Add("")
         Next
         Dim item7 As ListViewItem = New ListViewItem("Coś7", 0)
         item7.SubItems.Add("Szt.")
-        For i = 1 To 6
-            item7.SubItems.Add("-")
+        For i = 1 To 9
+            item7.SubItems.Add("0")
         Next
-        For i = 7 To 9
+        For i = 10 To 13
             item7.SubItems.Add("")
         Next
 
-        LvwMain.Columns.Add("Nazwa", 200, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Ilość", 60, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Materiał", 70, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Obróbka", 70, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Kooperacja", 90, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Nazwa", 100, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Ilość", 40, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Materiał", 65, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Obróbka", 65, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Kooperacja", 85, HorizontalAlignment.Left)
         LvwMain.Columns.Add("Pneumatyka", 90, HorizontalAlignment.Left)
         LvwMain.Columns.Add("Pneumatyka EUR", 120, HorizontalAlignment.Left)
         LvwMain.Columns.Add("Normalia", 70, HorizontalAlignment.Left)
         LvwMain.Columns.Add("Normalia EUR", 100, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Godziny projektowe", 130, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Godziny montażowe", 135, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Godziny wyjazdowe", 130, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Automatyka", 90, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Automatyka EUR", 115, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Automatyka godziny", 140, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Godziny projekt", 110, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Godziny montaż wyjazd", 160, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Godziny montaż SDA", 140, HorizontalAlignment.Left)
         LvwMain.Columns.Add("Suma", 60, HorizontalAlignment.Left)
 
         LvwMain.Items.AddRange(New ListViewItem() {item1, item2, item3, item4, item5, item6, item7})
@@ -196,12 +200,33 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
         '   Debug.Print(Ndt)
         '    End With
 
-
+        'Stary kod do wstawiania wartosci w konkretne komórki do Excel'a
         'excelRange.SpecialCells(Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeLastCell).Activate()
         'Dim intNewRow As Int32 = excelApp.ActiveCell.Row + 1
-        Dim intNewRow As Int32 = myreccnt
-        Dim strNewCellAddress As String = "B" & intNewRow
-        excelSheet.Range(strNewCellAddress).Value = "siemano"
+        '  Dim intNewRow As Int32 = myreccnt
+        '  Dim strNewCellAddress As String = "B" & intNewRow
+        ' excelSheet.Range(strNewCellAddress).Value = "siemano"
+        ' excelSheet.Range("C8").Value = "1"
+        ' excelSheet.Range("D8").Value = "100"
+        'excelSheet.Range("M8").Value = "50"
+
+        ' Kod na dodawanie nazw kolumn do excela
+        '   For i = 0 To LvwMain.Columns.Count - 1
+        'excelSheet.Cells(10, i + 1 + 1) = LvwMain.Columns(i).Text
+        'excelSheet.Columns.AutoFit()
+        'excelSheet.Columns.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+        'excelSheet.Columns.BorderAround(Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous, Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic)
+        'Next
+
+        For i = 0 To LvwMain.Items.Count - 1
+            For j = 0 To LvwMain.Items(i).SubItems.Count - 1
+                excelSheet.Cells(i + myreccnt, j + 2) = LvwMain.Items(i).SubItems(j).Text
+                'excelSheet.Columns.AutoFit()
+                'excelSheet.Columns.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                'excelSheet.Columns.BorderAround(Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous, Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic)
+            Next
+        Next
+
         excelBook.Save()
         excelBook.Close()
         excelApp.Quit()
