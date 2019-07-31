@@ -19,7 +19,11 @@ Wycena_Manager
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Wycena_Manager2.My.Resources.Resources.SDA_2019">
+</member><member name="P:Wycena_Manager2.My.Resources.Resources.dolar1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Wycena_Manager2.My.Resources.Resources.sda_jpeg2">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

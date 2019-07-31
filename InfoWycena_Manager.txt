@@ -25,4 +25,6 @@ Na później:
 * Podczas uruchamiania ma nie pamiętać czy pamiętać 
 * A gdzie godziny konstrukcyjne itp na całym module - Na później
 * Domyślne ustawienia po czyszczeniu - Default może by tak dać 1 jako z konsolą
-* 
+* Timer ile czasu zajmuje stworzenia 
+* z jakiś powodów przy starcie aplikacji Przycisk Czysc jest zaznaczonyu
+* Me.wait cursor w momencie exportu do pliku excela

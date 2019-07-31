@@ -17,6 +17,7 @@
         'Formuła ceny siłownika wariant*przelicznik
         If pyt2 = 0 Then
             Form1.LvwMain.Items(1).SubItems(1).Text = 0
+            Form1.LvwMain.Items(1).SubItems(5).Text = 0
         Else
             Form1.LvwMain.Items(1).SubItems(1).Text = 1
             Form1.LvwMain.Items(1).SubItems(5).Text = (ClampArray(1, pyt2) * num2)
@@ -25,6 +26,7 @@
         'Formuła ceny zaworu wariant*2,5% wartości siłownika
         If pyt2 = 0 Then
             Form1.LvwMain.Items(2).SubItems(1).Text = 0
+            Form1.LvwMain.Items(2).SubItems(5).Text = 0
         Else
             Form1.LvwMain.Items(2).SubItems(1).Text = Form1.GetDoubleNullable(Form1.LvwMain.Items(1).SubItems(1).Text) * 2
             Form1.LvwMain.Items(2).SubItems(5).Text = (ClampArray(1, pyt2) * 0.025)
@@ -53,6 +55,9 @@
         'Formuła ceny Konsoli Kooperacja: wariant*przelicznik*3%
         If pyt4 = 0 Then ' bez konsoli
             Form1.LvwMain.Items(5).SubItems(1).Text = 0
+            Form1.LvwMain.Items(5).SubItems(2).Text = 0
+            Form1.LvwMain.Items(5).SubItems(3).Text = 0
+            Form1.LvwMain.Items(5).SubItems(4).Text = 0
         ElseIf pyt2 = 0 Then ' Czyli jak nie ma siłownika to średnia cena 300 zł, a ma być konsola
             Form1.LvwMain.Items(5).SubItems(1).Text = 1
             Form1.LvwMain.Items(5).SubItems(2).Text = (1500 * 0.06 * num4)
@@ -65,12 +70,13 @@
             Form1.LvwMain.Items(5).SubItems(4).Text = (ClampArray(1, pyt2) * 0.03 * num4)
         End If
         'PRZELICZNIKI NORMALIA        
-        'Formuła ceny Konsoli Materiał: wariant*%
+        'Formuła ceny Normaliów Materiał: wariant*%
         If pyt2 = 0 Then
             Form1.LvwMain.Items(6).SubItems(1).Text = 1
+            Form1.LvwMain.Items(6).SubItems(7).Text = 50
         Else
             Form1.LvwMain.Items(6).SubItems(1).Text = 1
-            Form1.LvwMain.Items(6).SubItems(5).Text = (ClampArray(1, pyt2) * num2)
+            Form1.LvwMain.Items(6).SubItems(7).Text = (ClampArray(1, pyt2) * 0.07 * num2)
         End If
 
     End Sub

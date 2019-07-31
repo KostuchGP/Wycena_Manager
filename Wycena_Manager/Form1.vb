@@ -4,9 +4,10 @@ Imports Microsoft.Office.Interop.Excel
 #Const ProfileColRng = "$L:$L"
 
 Public Class Form1
-
+    Public ver As String = "1.1"
     Public excelSheets As Excel.Sheets
     Dim CalObj As Calculation = New Calculation()
+    Dim StyleNaglowekModulu As Excel.Style = 
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Main()
@@ -108,7 +109,7 @@ Public Class Form1
         txtNM.Clear()
     End Sub
 
-    Private Sub BtnTest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnTest.Click
+    Private Sub BtnTest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim money As Double = 12.34
         Dim euro As String = money.ToString("c", New Globalization.CultureInfo("fr-FR", False))
         MsgBox(euro)
@@ -130,6 +131,7 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
         Else
             'Jeżeli wszystko jest uzupełnione to przejdzie do liczenia modułu klampienia
             LvwMain.Items(0).Text = txtNM.Text
+            LvwMain.Items(0).SubItems(1).Text = 1
             CalObj.Przelicz(ComBoxPyt1.SelectedIndex, ComBoxPyt2.SelectedIndex, ComBoxPyt3.SelectedIndex, ComBoxPyt4.SelectedIndex, NumberPyt2.Value, NumberPyt3.Value, NumberPyt4.Value)
         End If
     End Sub
@@ -227,6 +229,10 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
         For i = 0 To LvwMain.Items.Count - 1
             For j = 0 To LvwMain.Items(i).SubItems.Count - 1
                 excelSheet.Cells(i + myreccnt, j + 2) = LvwMain.Items(i).SubItems(j).Text
+                If i = 0 And j = 0 Then
+                    excelSheet.Cells(i + myreccnt, j + 2).Font.isBold = True
+                    excelSheet.Cells(i + myreccnt, j + 2).BackgroundColor = Color.Yellow
+                End If
                 'excelSheet.Columns.AutoFit()
                 'excelSheet.Columns.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
                 'excelSheet.Columns.BorderAround(Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous, Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic)
@@ -256,5 +262,17 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
 
     Private Sub LvwMain_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LvwMain.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub DfgdfToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ModeToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub EvolvedInProgressToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EvolvedInProgressToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
+        MsgBox("Product: Wycena Manager" & Chr(10) & "File version: " & ver & Chr(10) & "Contact person: Grzegorz Pawezowski", MsgBoxStyle.Information, "About")
     End Sub
 End Class
