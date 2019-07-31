@@ -1,8 +1,7 @@
 Aktualne:
 * Wyliczanie modułu klampienia
-* A gdzie godziny konstrukcyjne itp na całym module - Na później
-
-
+* Poprawny Export danych
+* wyliczenia powinny się zaokrąglać
 
 
 
@@ -22,4 +21,8 @@ Na później:
 * Zdalne branie wzorcowego excela z lokalizacji instalacji
 * Dokumentacja szkoleniowa
 * Skróty klawiszowe, opcje tabulacji
-* Kolorowanie nazwy modułu w excelu 
+* Kolorowanie nazwy modułu w excelu
+* Podczas uruchamiania ma nie pamiętać czy pamiętać 
+* A gdzie godziny konstrukcyjne itp na całym module - Na później
+* Domyślne ustawienia po czyszczeniu - Default może by tak dać 1 jako z konsolą
+* 

@@ -16,3 +16,4 @@ C:\Users\Wojciech Kowalczyk\Documents\Visual Studio 2010\Projects\Wycena_Manager
 C:\Users\Wojciech Kowalczyk\Documents\Visual Studio 2010\Projects\Wycena_Manager\Wycena_Manager\obj\x86\Debug\Wycena_Manager2.Form1.resources
 C:\Users\Wojciech Kowalczyk\Documents\Visual Studio 2010\Projects\Wycena_Manager\Wycena_Manager\obj\x86\Debug\Wycena_Manager2.Resources.resources
 C:\Users\Wojciech Kowalczyk\Documents\Visual Studio 2010\Projects\Wycena_Manager\Wycena_Manager\obj\x86\Debug\Wycena_Manager.vbproj.GenerateResource.Cache
+C:\Users\Wojciech Kowalczyk\Documents\Visual Studio 2010\Projects\Wycena_Manager\Wycena_Manager\obj\x86\Debug\Wycena_Manager.vbprojResolveAssemblyReference.cache

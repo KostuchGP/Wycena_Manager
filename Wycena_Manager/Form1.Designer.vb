@@ -44,11 +44,13 @@ Partial Class Form1
         Me.LvwMain = New System.Windows.Forms.ListView()
         Me.BtnClose = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.NumberPyt2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumberPyt4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumberPyt3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NMLabel
@@ -297,11 +299,23 @@ Partial Class Form1
         Me.btnExport.Text = "Export"
         Me.btnExport.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.Wycena_Manager2.My.Resources.Resources.banda
+        Me.PictureBox1.Location = New System.Drawing.Point(164, 200)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(355, 212)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 25
+        Me.PictureBox1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1482, 505)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.LvwMain)
@@ -320,7 +334,9 @@ Partial Class Form1
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.NumberPyt4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumberPyt3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents NMLabel As System.Windows.Forms.Label
@@ -345,5 +361,6 @@ Partial Class Form1
     Friend WithEvents LvwMain As System.Windows.Forms.ListView
     Friend WithEvents BtnClose As System.Windows.Forms.Button
     Friend WithEvents btnExport As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class

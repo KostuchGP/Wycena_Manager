@@ -16,7 +16,8 @@ Public Class Form1
         ComBoxPyt3.SelectedIndex = 0
         ComBoxPyt4.SelectedIndex = 0
         'Poniżej zestaw rzeczy jakie zostaną wypełnione ogólnie, później to trzeba zamienić na rzeczy jakie są dla 
-        Dim item1 As ListViewItem = New ListViewItem("Siłownik", 0)
+
+        Dim item1 As ListViewItem = New ListViewItem("Nazwa modułu", 0)
         item1.SubItems.Add("Szt.")
         For i = 1 To 9
             item1.SubItems.Add("0")
@@ -24,7 +25,7 @@ Public Class Form1
         For i = 10 To 13
             item1.SubItems.Add("")
         Next
-        Dim item2 As ListViewItem = New ListViewItem("Zawór", 0)
+        Dim item2 As ListViewItem = New ListViewItem("Siłownik", 0)
         item2.SubItems.Add("Szt.")
         For i = 1 To 9
             item2.SubItems.Add("0")
@@ -32,7 +33,7 @@ Public Class Form1
         For i = 10 To 13
             item2.SubItems.Add("")
         Next
-        Dim item3 As ListViewItem = New ListViewItem("Kość", 0)
+        Dim item3 As ListViewItem = New ListViewItem("Zawór", 0)
         item3.SubItems.Add("Szt.")
         For i = 1 To 9
             item3.SubItems.Add("0")
@@ -40,7 +41,7 @@ Public Class Form1
         For i = 10 To 13
             item3.SubItems.Add("")
         Next
-        Dim item4 As ListViewItem = New ListViewItem("Shimowanie", 0)
+        Dim item4 As ListViewItem = New ListViewItem("Kość", 0)
         item4.SubItems.Add("Szt.")
         For i = 1 To 9
             item4.SubItems.Add("0")
@@ -48,7 +49,7 @@ Public Class Form1
         For i = 10 To 13
             item4.SubItems.Add("")
         Next
-        Dim item5 As ListViewItem = New ListViewItem("Konsola", 0)
+        Dim item5 As ListViewItem = New ListViewItem("Shimowanie", 0)
         item5.SubItems.Add("Szt.")
         For i = 1 To 9
             item5.SubItems.Add("0")
@@ -56,7 +57,7 @@ Public Class Form1
         For i = 10 To 13
             item5.SubItems.Add("")
         Next
-        Dim item6 As ListViewItem = New ListViewItem("Coś6", 0)
+        Dim item6 As ListViewItem = New ListViewItem("Konsola", 0)
         item6.SubItems.Add("Szt.")
         For i = 1 To 9
             item6.SubItems.Add("0")
@@ -64,7 +65,7 @@ Public Class Form1
         For i = 10 To 13
             item6.SubItems.Add("")
         Next
-        Dim item7 As ListViewItem = New ListViewItem("Coś7", 0)
+        Dim item7 As ListViewItem = New ListViewItem("Normalia", 0)
         item7.SubItems.Add("Szt.")
         For i = 1 To 9
             item7.SubItems.Add("0")
@@ -84,17 +85,19 @@ Public Class Form1
         LvwMain.Columns.Add("Normalia EUR", 100, HorizontalAlignment.Left)
         LvwMain.Columns.Add("Automatyka", 90, HorizontalAlignment.Left)
         LvwMain.Columns.Add("Automatyka EUR", 115, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Automatyka godziny", 140, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Godziny projekt", 110, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Godziny montaż wyjazd", 160, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Godziny montaż SDA", 140, HorizontalAlignment.Left)
-        LvwMain.Columns.Add("Suma", 60, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Automatyka godz", 120, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Godz projekt", 95, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Godz montaż wyjazd", 140, HorizontalAlignment.Left)
+        LvwMain.Columns.Add("Godz montaż SDA", 125, HorizontalAlignment.Left)
 
         LvwMain.Items.AddRange(New ListViewItem() {item1, item2, item3, item4, item5, item6, item7})
 
     End Sub
 
     Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnClear.Click
+
+        LvwMain.Clear()
+        Form1_Load(e, e)
         ComBoxPyt1.SelectedIndex = -1
         ComBoxPyt2.SelectedIndex = -1
         ComBoxPyt3.SelectedIndex = -1
@@ -111,10 +114,12 @@ Public Class Form1
         MsgBox(euro)
     End Sub
 
-    Private Sub BtnPrzelicz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPrzelicz.Click
+    Public Sub BtnPrzelicz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPrzelicz.Click
 
         If ComBoxPyt1.SelectedIndex = -1 Then
             GoTo Line1
+            'ElseIf txtNM.Text = Nothing Then
+            'GoTo Line1
         ElseIf ComBoxPyt2.SelectedIndex = -1 Then
             GoTo Line1
         ElseIf ComBoxPyt3.SelectedIndex = -1 Then
@@ -124,6 +129,7 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
             Exit Sub
         Else
             'Jeżeli wszystko jest uzupełnione to przejdzie do liczenia modułu klampienia
+            LvwMain.Items(0).Text = txtNM.Text
             CalObj.Przelicz(ComBoxPyt1.SelectedIndex, ComBoxPyt2.SelectedIndex, ComBoxPyt3.SelectedIndex, ComBoxPyt4.SelectedIndex, NumberPyt2.Value, NumberPyt3.Value, NumberPyt4.Value)
         End If
     End Sub
