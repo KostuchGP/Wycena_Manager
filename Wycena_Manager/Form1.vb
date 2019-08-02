@@ -7,7 +7,7 @@ Public Class Form1
     Public ver As String = "1.1"
     Public excelSheets As Excel.Sheets
     Dim CalObj As Calculation = New Calculation()
-    Dim StyleNaglowekModulu As Excel.Style = 
+    Dim StyleNaglowekModulu As Excel.Style
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Main()
@@ -191,6 +191,14 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
         excelSheets = excelBook.Sheets
         Dim excelSheet As Excel.Worksheet = excelSheets(1)
 
+        StyleNaglowekModulu = excelSheet.Application.ActiveWorkbook.Styles.Add("NewStyle")
+        StyleNaglowekModulu.Font.Bold = True
+        StyleNaglowekModulu.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Yellow)
+        'StyleNaglowekModulu.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+
+        'StyleNaglowekModulu.BorderAround(Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous, Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic)
+
+
 
         Dim excelRange As Excel.Range = excelSheet.UsedRange
 
@@ -207,7 +215,6 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
         'Dim Ndt = excelRange("B:B").Cells.SpecialCells(Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeConstants).Count
         '   Debug.Print(Ndt)
         '    End With
-
         'Stary kod do wstawiania wartosci w konkretne komórki do Excel'a
         'excelRange.SpecialCells(Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeLastCell).Activate()
         'Dim intNewRow As Int32 = excelApp.ActiveCell.Row + 1
@@ -217,7 +224,6 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
         ' excelSheet.Range("C8").Value = "1"
         ' excelSheet.Range("D8").Value = "100"
         'excelSheet.Range("M8").Value = "50"
-
         ' Kod na dodawanie nazw kolumn do excela
         '   For i = 0 To LvwMain.Columns.Count - 1
         'excelSheet.Cells(10, i + 1 + 1) = LvwMain.Columns(i).Text
@@ -230,8 +236,7 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
             For j = 0 To LvwMain.Items(i).SubItems.Count - 1
                 excelSheet.Cells(i + myreccnt, j + 2) = LvwMain.Items(i).SubItems(j).Text
                 If i = 0 And j = 0 Then
-                    excelSheet.Cells(i + myreccnt, j + 2).Font.isBold = True
-                    excelSheet.Cells(i + myreccnt, j + 2).BackgroundColor = Color.Yellow
+                    excelSheet.Cells(i + myreccnt, j + 2).Style = "NewStyle"
                 End If
                 'excelSheet.Columns.AutoFit()
                 'excelSheet.Columns.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter

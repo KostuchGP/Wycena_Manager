@@ -28,3 +28,7 @@ Na później:
 * Timer ile czasu zajmuje stworzenia 
 * z jakiś powodów przy starcie aplikacji Przycisk Czysc jest zaznaczonyu
 * Me.wait cursor w momencie exportu do pliku excela
+* Aby przed exportem danych konwertował ze stringa na liczby, wtedy excel nie wywala warningów
+* Nie mogę użyć add new style bo juz excel będzie zawierać go w sobie
+* zeby na pasku zadań była ikonka sda!
+* 
