@@ -191,9 +191,13 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
         excelSheets = excelBook.Sheets
         Dim excelSheet As Excel.Worksheet = excelSheets(1)
 
-        StyleNaglowekModulu = excelSheet.Application.ActiveWorkbook.Styles.Add("NewStyle")
-        StyleNaglowekModulu.Font.Bold = True
-        StyleNaglowekModulu.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Yellow)
+        '  Style ktory bedzie nadany
+        '  StyleNaglowekModulu = excelSheet.Application.ActiveWorkbook.Styles.Add("NewStyle")
+        '  StyleNaglowekModulu.Font.Bold = True
+        '  StyleNaglowekModulu.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Yellow)
+
+
+
         'StyleNaglowekModulu.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
 
         'StyleNaglowekModulu.BorderAround(Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous, Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic)
@@ -236,7 +240,11 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
             For j = 0 To LvwMain.Items(i).SubItems.Count - 1
                 excelSheet.Cells(i + myreccnt, j + 2) = LvwMain.Items(i).SubItems(j).Text
                 If i = 0 And j = 0 Then
-                    excelSheet.Cells(i + myreccnt, j + 2).Style = "NewStyle"
+                    'Nadanie wartosci komórce stylu
+                    'excelSheet.Cells(i + myreccnt, j + 2).Style = "NewStyle"
+                    'excelSheet.Range(i + myreccnt, j + 2).Font.Bold = "Bold"
+                    excelSheet.Range("B" & myreccnt).Font.Bold = True
+                    excelSheet.Range("B" & myreccnt).Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Yellow)
                 End If
                 'excelSheet.Columns.AutoFit()
                 'excelSheet.Columns.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
