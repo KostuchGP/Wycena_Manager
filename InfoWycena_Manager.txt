@@ -1,7 +1,7 @@
 Aktualne:
 * Wyliczanie modułu klampienia
 * Poprawny Export danych
-* wyliczenia powinny się zaokrąglać
+* Wyliczenia powinny się zaokrąglać
 
 
 

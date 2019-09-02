@@ -1,2 +1,8 @@
 ﻿# Items not tracked:
 Wycena_Manager.vshost.exe.manifest
+Wycena_Manager.suo
+Wycena_Manager/bin/Debug/Wycena_Manager.exe
+Wycena_Manager/bin/Debug/Wycena_Manager.pdb
+Wycena_Manager/obj/x86/Debug/Wycena_Manager.exe
+Wycena_Manager/obj/x86/Debug/Wycena_Manager.pdb
+
