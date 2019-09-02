@@ -1,7 +1,7 @@
 Aktualne:
-* Wyliczanie modułu klampienia
 * Poprawny Export danych
-* Wyliczenia powinny się zaokrąglać
+* Wyliczanie modułu klampienia
+* Liczenie podsumowania
 
 
 
@@ -31,4 +31,8 @@ Na później:
 * Aby przed exportem danych konwertował ze stringa na liczby, wtedy excel nie wywala warningów
 * Nie mogę użyć add new style bo juz excel będzie zawierać go w sobie
 * zeby na pasku zadań była ikonka sda!
-* 
+* Zeby 
+
+
+Data 02-09-2019 Zaokrągla liczenie 
+

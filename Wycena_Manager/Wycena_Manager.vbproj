@@ -126,13 +126,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\banda.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\sda_jpeg2.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dolar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sda_2019_sgB_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -45,15 +45,15 @@ Partial Class Form1
         Me.LvwMain = New System.Windows.Forms.ListView()
         Me.BtnClose = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtSuma = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LbSuma = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BasicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EvolvedInProgressToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.NumberPyt2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,7 +61,6 @@ Partial Class Form1
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumberPyt4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumberPyt3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LbNM
@@ -302,16 +301,16 @@ Partial Class Form1
         Me.btnExport.Text = "Export"
         Me.btnExport.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtSuma
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Tahoma", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(700, 113)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(201, 58)
-        Me.TextBox1.TabIndex = 25
-        Me.TextBox1.Tag = ""
+        Me.txtSuma.Font = New System.Drawing.Font("Tahoma", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.txtSuma.Location = New System.Drawing.Point(700, 113)
+        Me.txtSuma.Multiline = True
+        Me.txtSuma.Name = "txtSuma"
+        Me.txtSuma.ReadOnly = True
+        Me.txtSuma.Size = New System.Drawing.Size(201, 58)
+        Me.txtSuma.TabIndex = 25
+        Me.txtSuma.Tag = ""
         '
         'LbSuma
         '
@@ -326,11 +325,10 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.LightGreen
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Orange
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1482, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1482, 24)
         Me.MenuStrip1.TabIndex = 27
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -340,20 +338,6 @@ Partial Class Form1
         Me.ModeToolStripMenuItem.Name = "ModeToolStripMenuItem"
         Me.ModeToolStripMenuItem.Size = New System.Drawing.Size(60, 24)
         Me.ModeToolStripMenuItem.Text = "Mode"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
-        Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
-        Me.AboutToolStripMenuItem.Text = "About"
         '
         'BasicToolStripMenuItem
         '
@@ -368,6 +352,20 @@ Partial Class Form1
         Me.EvolvedInProgressToolStripMenuItem.Name = "EvolvedInProgressToolStripMenuItem"
         Me.EvolvedInProgressToolStripMenuItem.Size = New System.Drawing.Size(233, 24)
         Me.EvolvedInProgressToolStripMenuItem.Text = "Evolved - Not provided"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(119, 24)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
         'Label1
         '
@@ -395,12 +393,12 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightGreen
+        Me.BackColor = System.Drawing.Color.Orange
         Me.ClientSize = New System.Drawing.Size(1482, 505)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LbSuma)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtSuma)
         Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.LvwMain)
@@ -421,8 +419,6 @@ Partial Class Form1
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.NumberPyt4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumberPyt3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -448,7 +444,7 @@ Partial Class Form1
     Friend WithEvents LvwMain As System.Windows.Forms.ListView
     Friend WithEvents BtnClose As System.Windows.Forms.Button
     Friend WithEvents btnExport As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtSuma As System.Windows.Forms.TextBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents LbSuma As System.Windows.Forms.Label
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip

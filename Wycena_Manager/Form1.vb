@@ -133,6 +133,7 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
             LvwMain.Items(0).Text = txtNM.Text
             LvwMain.Items(0).SubItems(1).Text = 1
             CalObj.Przelicz(ComBoxPyt1.SelectedIndex, ComBoxPyt2.SelectedIndex, ComBoxPyt3.SelectedIndex, ComBoxPyt4.SelectedIndex, NumberPyt2.Value, NumberPyt3.Value, NumberPyt4.Value)
+
         End If
     End Sub
 
@@ -288,4 +289,12 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
     Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
         MsgBox("Product: Wycena Manager" & Chr(10) & "File version: " & ver & Chr(10) & "Contact person: Grzegorz Pawezowski", MsgBoxStyle.Information, "About")
     End Sub
+
+    Private Function Suma(ByVal suma1 As Integer) As Integer
+        Dim suma2 As Integer
+        For i = 0 To Me.LvwMain.Items.Count - 1
+        Next
+        Return suma2
+    End Function
+
 End Class
