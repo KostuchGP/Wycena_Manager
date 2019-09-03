@@ -41,7 +41,6 @@ Partial Class Form1
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.NumberPyt4 = New System.Windows.Forms.NumericUpDown()
         Me.NumberPyt3 = New System.Windows.Forms.NumericUpDown()
-        Me.LbPrzelicznik = New System.Windows.Forms.Label()
         Me.LvwMain = New System.Windows.Forms.ListView()
         Me.BtnClose = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.Button()
@@ -56,11 +55,19 @@ Partial Class Form1
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.LvwZestawienie = New System.Windows.Forms.ListView()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.NumberPyt2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumberPyt4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumberPyt3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'LbNM
@@ -70,16 +77,16 @@ Partial Class Form1
         Me.LbNM.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbNM.Location = New System.Drawing.Point(6, 20)
         Me.LbNM.Name = "LbNM"
-        Me.LbNM.Size = New System.Drawing.Size(314, 26)
+        Me.LbNM.Size = New System.Drawing.Size(298, 26)
         Me.LbNM.TabIndex = 1
         Me.LbNM.Text = "Nazwa modułu:"
         '
         'txtNM
         '
         Me.txtNM.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNM.Location = New System.Drawing.Point(326, 22)
+        Me.txtNM.Location = New System.Drawing.Point(310, 21)
         Me.txtNM.Name = "txtNM"
-        Me.txtNM.Size = New System.Drawing.Size(237, 26)
+        Me.txtNM.Size = New System.Drawing.Size(206, 26)
         Me.txtNM.TabIndex = 3
         '
         'LbPyt1
@@ -89,7 +96,7 @@ Partial Class Form1
         Me.LbPyt1.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbPyt1.Location = New System.Drawing.Point(6, 56)
         Me.LbPyt1.Name = "LbPyt1"
-        Me.LbPyt1.Size = New System.Drawing.Size(314, 26)
+        Me.LbPyt1.Size = New System.Drawing.Size(298, 26)
         Me.LbPyt1.TabIndex = 4
         Me.LbPyt1.Text = "Rodzaj modułu"
         '
@@ -100,7 +107,7 @@ Partial Class Form1
         Me.LbPyt2.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbPyt2.Location = New System.Drawing.Point(6, 92)
         Me.LbPyt2.Name = "LbPyt2"
-        Me.LbPyt2.Size = New System.Drawing.Size(314, 26)
+        Me.LbPyt2.Size = New System.Drawing.Size(298, 26)
         Me.LbPyt2.TabIndex = 6
         Me.LbPyt2.Text = "Rozmiar siłownika"
         '
@@ -108,9 +115,9 @@ Partial Class Form1
         '
         Me.ComBoxPyt2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComBoxPyt2.Items.AddRange(New Object() {"Brak", "Mały [40]", "Średni [50-63]", "Duży [80]"})
-        Me.ComBoxPyt2.Location = New System.Drawing.Point(326, 94)
+        Me.ComBoxPyt2.Location = New System.Drawing.Point(310, 94)
         Me.ComBoxPyt2.Name = "ComBoxPyt2"
-        Me.ComBoxPyt2.Size = New System.Drawing.Size(237, 24)
+        Me.ComBoxPyt2.Size = New System.Drawing.Size(206, 24)
         Me.ComBoxPyt2.TabIndex = 10
         Me.ComBoxPyt2.Tag = ""
         '
@@ -118,9 +125,9 @@ Partial Class Form1
         '
         Me.ComBoxPyt1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComBoxPyt1.Items.AddRange(New Object() {"Moduł poz. z siłownikiem obr.", "Moduł pozycjonowania", "Moduł zabudowy"})
-        Me.ComBoxPyt1.Location = New System.Drawing.Point(326, 58)
+        Me.ComBoxPyt1.Location = New System.Drawing.Point(310, 58)
         Me.ComBoxPyt1.Name = "ComBoxPyt1"
-        Me.ComBoxPyt1.Size = New System.Drawing.Size(237, 24)
+        Me.ComBoxPyt1.Size = New System.Drawing.Size(206, 24)
         Me.ComBoxPyt1.TabIndex = 11
         Me.ComBoxPyt1.Tag = ""
         '
@@ -131,7 +138,7 @@ Partial Class Form1
         Me.LbPyt3.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbPyt3.Location = New System.Drawing.Point(6, 125)
         Me.LbPyt3.Name = "LbPyt3"
-        Me.LbPyt3.Size = New System.Drawing.Size(314, 26)
+        Me.LbPyt3.Size = New System.Drawing.Size(298, 26)
         Me.LbPyt3.TabIndex = 12
         Me.LbPyt3.Text = "Ilość kierunków pozycjonowania"
         '
@@ -139,9 +146,9 @@ Partial Class Form1
         '
         Me.ComBoxPyt3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComBoxPyt3.Items.AddRange(New Object() {"1", "2", "3"})
-        Me.ComBoxPyt3.Location = New System.Drawing.Point(326, 127)
+        Me.ComBoxPyt3.Location = New System.Drawing.Point(310, 127)
         Me.ComBoxPyt3.Name = "ComBoxPyt3"
-        Me.ComBoxPyt3.Size = New System.Drawing.Size(237, 24)
+        Me.ComBoxPyt3.Size = New System.Drawing.Size(206, 24)
         Me.ComBoxPyt3.TabIndex = 13
         Me.ComBoxPyt3.Tag = ""
         '
@@ -152,7 +159,7 @@ Partial Class Form1
         Me.LbPyt4.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbPyt4.Location = New System.Drawing.Point(6, 160)
         Me.LbPyt4.Name = "LbPyt4"
-        Me.LbPyt4.Size = New System.Drawing.Size(314, 26)
+        Me.LbPyt4.Size = New System.Drawing.Size(298, 26)
         Me.LbPyt4.TabIndex = 14
         Me.LbPyt4.Text = "Konsola, gł mocowanie?"
         '
@@ -160,16 +167,16 @@ Partial Class Form1
         '
         Me.ComBoxPyt4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComBoxPyt4.Items.AddRange(New Object() {"Nie", "Tak"})
-        Me.ComBoxPyt4.Location = New System.Drawing.Point(326, 162)
+        Me.ComBoxPyt4.Location = New System.Drawing.Point(310, 161)
         Me.ComBoxPyt4.Name = "ComBoxPyt4"
-        Me.ComBoxPyt4.Size = New System.Drawing.Size(237, 24)
+        Me.ComBoxPyt4.Size = New System.Drawing.Size(206, 24)
         Me.ComBoxPyt4.TabIndex = 15
         Me.ComBoxPyt4.Tag = ""
         '
         'BtnClear
         '
         Me.BtnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.BtnClear.Location = New System.Drawing.Point(806, 31)
+        Me.BtnClear.Location = New System.Drawing.Point(731, 31)
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(95, 44)
         Me.BtnClear.TabIndex = 16
@@ -185,14 +192,14 @@ Partial Class Form1
         Me.NumberPyt2.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.NumberPyt2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumberPyt2.Name = "NumberPyt2"
-        Me.NumberPyt2.Size = New System.Drawing.Size(90, 22)
+        Me.NumberPyt2.Size = New System.Drawing.Size(66, 22)
         Me.NumberPyt2.TabIndex = 17
         Me.NumberPyt2.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'BtnPrzelicz
         '
         Me.BtnPrzelicz.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.BtnPrzelicz.Location = New System.Drawing.Point(699, 31)
+        Me.BtnPrzelicz.Location = New System.Drawing.Point(624, 31)
         Me.BtnPrzelicz.Name = "BtnPrzelicz"
         Me.BtnPrzelicz.Size = New System.Drawing.Size(101, 44)
         Me.BtnPrzelicz.TabIndex = 18
@@ -213,7 +220,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.LbPyt3)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 27)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(571, 193)
+        Me.GroupBox1.Size = New System.Drawing.Size(523, 193)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Dane wejściowe"
@@ -223,13 +230,12 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.NumberPyt4)
         Me.GroupBox2.Controls.Add(Me.NumberPyt3)
         Me.GroupBox2.Controls.Add(Me.NumberPyt2)
-        Me.GroupBox2.Controls.Add(Me.LbPrzelicznik)
-        Me.GroupBox2.Location = New System.Drawing.Point(589, 28)
+        Me.GroupBox2.Location = New System.Drawing.Point(541, 28)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(104, 192)
+        Me.GroupBox2.Size = New System.Drawing.Size(78, 192)
         Me.GroupBox2.TabIndex = 20
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Przeliczniki"
+        Me.GroupBox2.Text = "Mnożniki ceny"
         '
         'NumberPyt4
         '
@@ -239,7 +245,7 @@ Partial Class Form1
         Me.NumberPyt4.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.NumberPyt4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumberPyt4.Name = "NumberPyt4"
-        Me.NumberPyt4.Size = New System.Drawing.Size(90, 22)
+        Me.NumberPyt4.Size = New System.Drawing.Size(66, 22)
         Me.NumberPyt4.TabIndex = 19
         Me.NumberPyt4.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
@@ -251,30 +257,19 @@ Partial Class Form1
         Me.NumberPyt3.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.NumberPyt3.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumberPyt3.Name = "NumberPyt3"
-        Me.NumberPyt3.Size = New System.Drawing.Size(90, 22)
+        Me.NumberPyt3.Size = New System.Drawing.Size(66, 22)
         Me.NumberPyt3.TabIndex = 18
         Me.NumberPyt3.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
-        'LbPrzelicznik
-        '
-        Me.LbPrzelicznik.BackColor = System.Drawing.Color.White
-        Me.LbPrzelicznik.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LbPrzelicznik.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbPrzelicznik.Location = New System.Drawing.Point(6, 57)
-        Me.LbPrzelicznik.Name = "LbPrzelicznik"
-        Me.LbPrzelicznik.Size = New System.Drawing.Size(90, 26)
-        Me.LbPrzelicznik.TabIndex = 16
-        Me.LbPrzelicznik.Text = "Mnożniki:"
         '
         'LvwMain
         '
         Me.LvwMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LvwMain.Location = New System.Drawing.Point(18, 238)
+        Me.LvwMain.Location = New System.Drawing.Point(0, 0)
         Me.LvwMain.MultiSelect = False
         Me.LvwMain.Name = "LvwMain"
-        Me.LvwMain.Size = New System.Drawing.Size(1452, 255)
+        Me.LvwMain.Size = New System.Drawing.Size(1490, 240)
         Me.LvwMain.TabIndex = 22
         Me.LvwMain.UseCompatibleStateImageBehavior = False
         Me.LvwMain.View = System.Windows.Forms.View.Details
@@ -282,7 +277,7 @@ Partial Class Form1
         'BtnClose
         '
         Me.BtnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.BtnClose.Location = New System.Drawing.Point(1375, 187)
+        Me.BtnClose.Location = New System.Drawing.Point(1375, 183)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(95, 44)
         Me.BtnClose.TabIndex = 23
@@ -294,7 +289,7 @@ Partial Class Form1
         Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.btnExport.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnExport.Location = New System.Drawing.Point(800, 177)
+        Me.btnExport.Location = New System.Drawing.Point(725, 177)
         Me.btnExport.Name = "btnExport"
         Me.btnExport.Size = New System.Drawing.Size(100, 40)
         Me.btnExport.TabIndex = 24
@@ -304,7 +299,7 @@ Partial Class Form1
         'txtSuma
         '
         Me.txtSuma.Font = New System.Drawing.Font("Tahoma", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.txtSuma.Location = New System.Drawing.Point(700, 113)
+        Me.txtSuma.Location = New System.Drawing.Point(625, 113)
         Me.txtSuma.Multiline = True
         Me.txtSuma.Name = "txtSuma"
         Me.txtSuma.ReadOnly = True
@@ -317,7 +312,7 @@ Partial Class Form1
         Me.LbSuma.BackColor = System.Drawing.Color.White
         Me.LbSuma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LbSuma.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.LbSuma.Location = New System.Drawing.Point(700, 78)
+        Me.LbSuma.Location = New System.Drawing.Point(625, 78)
         Me.LbSuma.Name = "LbSuma"
         Me.LbSuma.Size = New System.Drawing.Size(79, 26)
         Me.LbSuma.TabIndex = 26
@@ -328,7 +323,7 @@ Partial Class Form1
         Me.MenuStrip1.BackColor = System.Drawing.Color.Orange
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1482, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1532, 24)
         Me.MenuStrip1.TabIndex = 27
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -372,9 +367,9 @@ Partial Class Form1
         Me.Label1.BackColor = System.Drawing.Color.Khaki
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label1.Location = New System.Drawing.Point(907, 28)
+        Me.Label1.Location = New System.Drawing.Point(1020, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(354, 196)
+        Me.Label1.Size = New System.Drawing.Size(349, 193)
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "FOTO"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -382,26 +377,79 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Button1.Location = New System.Drawing.Point(699, 176)
+        Me.Button1.Location = New System.Drawing.Point(624, 176)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(95, 44)
         Me.Button1.TabIndex = 29
         Me.Button1.Text = "Dodaj"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(18, 226)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(1500, 270)
+        Me.TabControl1.TabIndex = 30
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.LvwMain)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(1492, 241)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Moduł"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.LvwZestawienie)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1492, 241)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Zestawienie modułów"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'LvwZestawienie
+        '
+        Me.LvwZestawienie.Location = New System.Drawing.Point(0, 0)
+        Me.LvwZestawienie.Name = "LvwZestawienie"
+        Me.LvwZestawienie.Size = New System.Drawing.Size(1490, 240)
+        Me.LvwZestawienie.TabIndex = 0
+        Me.LvwZestawienie.UseCompatibleStateImageBehavior = False
+        Me.LvwZestawienie.View = System.Windows.Forms.View.Details
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label2.Location = New System.Drawing.Point(842, 31)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(114, 62)
+        Me.Label2.TabIndex = 31
+        Me.Label2.Text = "Suma projektu"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Orange
-        Me.ClientSize = New System.Drawing.Size(1482, 505)
+        Me.ClientSize = New System.Drawing.Size(1532, 505)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LbSuma)
         Me.Controls.Add(Me.txtSuma)
         Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.BtnClose)
-        Me.Controls.Add(Me.LvwMain)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnPrzelicz)
@@ -409,8 +457,8 @@ Partial Class Form1
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MaximumSize = New System.Drawing.Size(1500, 800)
-        Me.MinimumSize = New System.Drawing.Size(1330, 550)
+        Me.MaximumSize = New System.Drawing.Size(1800, 800)
+        Me.MinimumSize = New System.Drawing.Size(1500, 550)
         Me.Name = "Form1"
         Me.Text = "Wycena_Manager_V1"
         CType(Me.NumberPyt2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -419,6 +467,9 @@ Partial Class Form1
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.NumberPyt4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumberPyt3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -440,7 +491,6 @@ Partial Class Form1
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents NumberPyt4 As System.Windows.Forms.NumericUpDown
     Friend WithEvents NumberPyt3 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents LbPrzelicznik As System.Windows.Forms.Label
     Friend WithEvents LvwMain As System.Windows.Forms.ListView
     Friend WithEvents BtnClose As System.Windows.Forms.Button
     Friend WithEvents btnExport As System.Windows.Forms.Button
@@ -455,5 +505,10 @@ Partial Class Form1
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents LvwZestawienie As System.Windows.Forms.ListView
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class

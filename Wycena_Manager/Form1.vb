@@ -93,6 +93,15 @@ Public Class Form1
 
         LvwMain.Items.AddRange(New ListViewItem() {item1, item2, item3, item4, item5, item6, item7})
 
+        ' TWORZENIE LISTY ZESTAWIENIE MODULOW
+
+        LvwZestawienie.Columns.Add("Nr", 30, HorizontalAlignment.Left)
+        LvwZestawienie.Columns.Add("Nazwa modułu", 140, HorizontalAlignment.Left)
+        LvwZestawienie.Columns.Add("Ilość", 40, HorizontalAlignment.Left)
+        LvwZestawienie.Columns.Add("Cena [szt.]", 100, HorizontalAlignment.Left)
+
+        LvwZestawienie.Items.AddRange(New ListViewItem() {item1, item2, item3, item4, item5, item6, item7})
+
     End Sub
 
     Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnClear.Click
@@ -240,6 +249,7 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
         For i = 0 To LvwMain.Items.Count - 1
             For j = 0 To LvwMain.Items(i).SubItems.Count - 1
                 excelSheet.Cells(i + myreccnt, j + 2) = LvwMain.Items(i).SubItems(j).Text
+
                 If i = 0 And j = 0 Then
                     'Nadanie wartosci komórce stylu
                     'excelSheet.Cells(i + myreccnt, j + 2).Style = "NewStyle"
@@ -252,6 +262,9 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
                 'excelSheet.Columns.BorderAround(Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous, Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic, Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic)
             Next
         Next
+
+        'txtSuma.Text = excelSheet.Cells(5 + myreccnt, 7 + 2).value
+        txtSuma.Text = excelSheet.Range("P4").Value
 
         excelBook.Save()
         excelBook.Close()
@@ -296,5 +309,6 @@ Line1:      MsgBox("Proszę uzupełnij wszystkie pola")
         Next
         Return suma2
     End Function
+
 
 End Class
