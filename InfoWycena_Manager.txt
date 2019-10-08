@@ -2,6 +2,10 @@ Aktualne:
 * Poprawny Export danych
 * Wyliczanie modułu klampienia
 * Liczenie podsumowania
+* Zapisywanie do pliku
+* Dodanie nazwy pliku
+* Lista modułów ma innej zakładce
+* Liczenie podsumowania, ma pokazywać wraz z kliknięciem przelicz
 
 
 
@@ -30,10 +34,12 @@ Na później:
 * Me.wait cursor w momencie exportu do pliku excela
 * Aby przed exportem danych konwertował ze stringa na liczby, wtedy excel nie wywala warningów
 * Nie mogę użyć add new style bo juz excel będzie zawierać go w sobie
-
+* Co jak chcę 3 takie same moduły?
 * Zeby 
 
 
 Data 02-09-2019 
 Zaokrągla liczenie 
 zeby na pasku zadań była ikonka sda!
+Data 03-09-2019
+* dodanie zakładek
